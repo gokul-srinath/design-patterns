@@ -1,0 +1,100 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.cat {
+    border: 1px solid gainsboro;
+    padding: 2rem;
+}
+
+.control {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.click {
+    cursor: pointer;
+    
+    object-fit: contain;
+}
+
+.click:active {
+    transform: translateY(5px);
+}
+
+.counter {
+    border: 1px solid rgb(49, 133, 202);
+    padding-top: 5px;
+}
+
+.name {
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-style: normal;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.img{
+    width:"350px";
+    height:"450px";
+}
+
+.section1 {
+    width: 25%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 1px dashed rgba(80, 80, 80, 0.747);
+    
+}
+
+.section2 {
+    width: 75%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+
+    
+}
+
+.elems{
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 1.4rem;
+    margin: 5px;
+    text-transform: capitalize;
+    user-select: none;
+}
+
+.elems:active {
+    transform: translateY(2px);
+}
+
+
+.default {
+
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: rgba(80, 80, 80, 0.747);
+}
