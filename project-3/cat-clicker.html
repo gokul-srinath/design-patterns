@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat Clicker 3.0</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="section1">
+        <ol class="list" type="A"></ol>
+      </div>
+      <div class="section2">
+        <h2 class="default">click cat to display picture here</h2>
+        <div class="cat">
+          <h2 class="name"></h2>
+          <div class="click">
+            <img src="" alt="cat" width="350px" height="450px" class="img" />
+          </div>
+          <div class="control">
+            <div class="content">
+              Number of clicks : <span class="counter"> </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section3">
+        <button class="button admin-button">Admin</button>
+        <div class="admin-div">
+          <form class="admin-form">
+            <div class="admin-inputs">
+              <label for="cat-name">Name : </label>
+              <input type="text" value="" id="cat-name" />
+            </div>
+            <div class="admin-inputs">
+              <label for="cat-url">url : </label>
+              <input type="url" value="" id="cat-url" />
+            </div>
+            <div class="admin-inputs">
+              <label for="cat-clicks">clicks : </label>
+              <input type="number" value="" id="cat-clicks" />
+            </div>
+          </form>
+          <div class="button-group">
+            <button class="button save">Save</button>
+            <button class="cancel button">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>

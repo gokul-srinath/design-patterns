@@ -1,0 +1,160 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.cat {
+    border: 1px solid gainsboro;
+    padding: 2rem;
+}
+
+.control {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.click {
+    cursor: pointer;
+    
+    object-fit: contain;
+}
+
+.click:active {
+    transform: translateY(5px);
+}
+
+.counter {
+    border: 1px solid rgb(49, 133, 202);
+    padding-top: 5px;
+}
+
+.name {
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-style: normal;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.img{
+    width:"350px";
+    height:"450px";
+}
+
+.main > * {
+    border-right: 1px dashed rgba(80, 80, 80, 0.747);
+}
+
+.section1 {
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+    
+}
+
+.section2 {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.section3 {
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.elems{
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 1.4rem;
+    margin: 5px;
+    text-transform: capitalize;
+    user-select: none;
+}
+
+.elems:active {
+    transform: translateY(2px);
+}
+
+
+.default {
+
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: rgba(80, 80, 80, 0.747);
+}
+
+
+.button {
+    background-color: rgb(52, 52, 211);
+    color: white;
+    outline: none;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+}
+
+.button:active{
+    transform: translateY(2px);
+}
+
+.admin-div {
+    margin-top: 2rem;
+    border: 1px solid rgba(80, 80, 80, 0.747);  
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+
+.admin-inputs {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-inputs > input {
+    font-size: 1.2rem;
+    outline: none;
+    
+}
+
+.admin-form {
+    /* display: none; */
+    
+    
+}
+
+.button.cancel {
+    background-color: rgb(146, 15, 15);
+}
