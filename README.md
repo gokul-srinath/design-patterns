@@ -3,3 +3,9 @@ Factory Method is a creational design pattern that provides an interface for cre
 
 
 ![Landing Page](./Factory%20Pattern%201.png)
+
+## Factory Pattern 2.0
+
+This Factory Creator manages Multiple specific products with **Switch** handler, where factoryCreator function accepts a productName as an argument and return the specific Product.
+
+![Factory Pattern 2](./Factory%20Pattern%202.png)
