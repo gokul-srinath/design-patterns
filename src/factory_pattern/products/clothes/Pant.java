@@ -1,6 +1,6 @@
-package factory_pattern.products;
+package factory_pattern.products.clothes;
 
-public class Pant implements Product{
+public class Pant extends Clothing{
     @Override
     public String getName() {
         return "Pant";

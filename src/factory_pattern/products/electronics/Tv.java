@@ -1,6 +1,6 @@
-package factory_pattern.products;
+package factory_pattern.products.electronics;
 
-public class Tv implements Product{
+public class Tv extends Electronics{
     @Override
     public String getName() {
         return "TV";

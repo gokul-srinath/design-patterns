@@ -1,8 +1,8 @@
-import factory_pattern.creator.CosmeticsCreator;
-import factory_pattern.creator.ElectronicsCreator;
-import factory_pattern.creator.FactoryCreator;
-import factory_pattern.creator.FactoryProductCreator;
+import factory_pattern.creator.*;
 import factory_pattern.products.Product;
+import factory_pattern.products.clothes.Clothing;
+import factory_pattern.products.cosmetics.Cosmetics;
+import factory_pattern.products.electronics.Electronics;
 
 public class Main {
 
@@ -16,22 +16,31 @@ public class Main {
         }
 
         System.out.println(sb);
+        System.out.println("=============");
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalArgumentException{
         FactoryCreator electronicsCreator = new ElectronicsCreator();
-        Product electronics = electronicsCreator.factoryCreator();
+        FactoryCreator cosmeticCreator = new CosmeticsCreator();
+        FactoryCreator clothingCreator = new ClothingCreator();
 
-        FactoryCreator tvFactory = new FactoryProductCreator("tv");
-        Product tv = tvFactory.factoryCreator();
+        Electronics tv = (Electronics) electronicsCreator.factoryCreator("tv");
+        Electronics smartphone = (Electronics) electronicsCreator.factoryCreator("smartphone");
 
-        print(tv.getName(),tv.getDescription());
+        Cosmetics mascara = (Cosmetics)  cosmeticCreator.factoryCreator("mascara");
+        Cosmetics moisturizer = (Cosmetics)  cosmeticCreator.factoryCreator("moisturizer");
 
-        FactoryCreator mascaraFactory = new FactoryProductCreator("mascara");
-        Product mascara = mascaraFactory.factoryCreator();
+        Clothing pant = (Clothing)  clothingCreator.factoryCreator("pant");
+//        Clothing suits = (Clothing)  clothingCreator.factoryCreator("suits");
 
-        print(mascara.getName(),mascara.getDescription());
+        print("\n","Category:",tv.getCategory(),"\n","Name:",tv.getName(),"\n","Description:",tv.getDescription());
+        print("\n","Category:",smartphone.getCategory(),"\n","Name:",smartphone.getName(),"\n","Description:",smartphone.getDescription());
 
+        print("\n","Category:",mascara.getCategory(),"\n","Name:",mascara.getName(),"\n","Description:",mascara.getDescription());
+        print("\n","Category:",moisturizer.getCategory(),"\n","Name:",moisturizer.getName(),"\n","Description:",moisturizer.getDescription());
+
+        print("\n","Category:",pant.getCategory(),"\n","Name:",pant.getName(),"\n","Description:",pant.getDescription());
+//        print("\n","Category:",suits.getCategory(),"\n","Name:",suits.getName(),"\n","Description:",suits.getDescription());
     }
 }

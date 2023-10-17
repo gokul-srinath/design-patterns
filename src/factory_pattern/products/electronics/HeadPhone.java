@@ -1,6 +1,6 @@
-package factory_pattern.products;
+package factory_pattern.products.electronics;
 
-public class HeadPhone implements Product{
+public class HeadPhone extends Electronics{
     @Override
     public String getName() {
         return "HeadPhone";

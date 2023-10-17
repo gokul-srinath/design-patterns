@@ -1,6 +1,6 @@
-package factory_pattern.products;
+package factory_pattern.products.cosmetics;
 
-public class Mascara implements Product{
+public class Mascara extends Cosmetics{
     @Override
     public String getName() {
         return "Mascara";
