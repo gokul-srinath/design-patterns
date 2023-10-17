@@ -1,6 +1,7 @@
 import factory_pattern.creator.CosmeticsCreator;
 import factory_pattern.creator.ElectronicsCreator;
 import factory_pattern.creator.FactoryCreator;
+import factory_pattern.creator.FactoryProductCreator;
 import factory_pattern.products.Product;
 
 public class Main {
@@ -22,12 +23,15 @@ public class Main {
         FactoryCreator electronicsCreator = new ElectronicsCreator();
         Product electronics = electronicsCreator.factoryCreator();
 
-        print(electronics.getName(),electronics.getDescription());
+        FactoryCreator tvFactory = new FactoryProductCreator("tv");
+        Product tv = tvFactory.factoryCreator();
 
-        FactoryCreator cosmeticsCreator = new CosmeticsCreator();
-        Product cosmetics = cosmeticsCreator.factoryCreator();
+        print(tv.getName(),tv.getDescription());
 
-        print(cosmetics.getName(),cosmetics.getDescription());
+        FactoryCreator mascaraFactory = new FactoryProductCreator("mascara");
+        Product mascara = mascaraFactory.factoryCreator();
+
+        print(mascara.getName(),mascara.getDescription());
 
     }
 }
