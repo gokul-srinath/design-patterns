@@ -16,3 +16,8 @@ Increased Abstraction to One level with **Category**._i.e Sub-Products Of electr
 Factory method is now breakfown to categories, each category with switch handler produces specific product.
 
 ![Factory Pattern 3](./Factory%20Pattern%203.png)
+
+## Abstract Factory Pattern 1
+Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying their concrete classes.
+
+![Abstract Factory Pattern 1](./Abstract%20Factory%20Pattern%201.png)

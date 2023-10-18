@@ -1,3 +1,7 @@
+import abstract_factory_pattern.factories.ModernFactory;
+import abstract_factory_pattern.factories.ProductFactory;
+import abstract_factory_pattern.products.chair.ChairProduct;
+import abstract_factory_pattern.products.sofa.SofaProduct;
 import factory_pattern.creator.*;
 import factory_pattern.products.Product;
 import factory_pattern.products.clothes.Clothing;
@@ -21,26 +25,14 @@ public class Main {
     }
 
     public static void main(String[] args) throws IllegalArgumentException{
-        FactoryCreator electronicsCreator = new ElectronicsCreator();
-        FactoryCreator cosmeticCreator = new CosmeticsCreator();
-        FactoryCreator clothingCreator = new ClothingCreator();
+        ProductFactory modernFactory = new ModernFactory();
 
-        Electronics tv = (Electronics) electronicsCreator.factoryCreator("tv");
-        Electronics smartphone = (Electronics) electronicsCreator.factoryCreator("smartphone");
+        ChairProduct chair = modernFactory.createChair();
+        SofaProduct sofa = modernFactory.createSofa();
 
-        Cosmetics mascara = (Cosmetics)  cosmeticCreator.factoryCreator("mascara");
-        Cosmetics moisturizer = (Cosmetics)  cosmeticCreator.factoryCreator("moisturizer");
 
-        Clothing pant = (Clothing)  clothingCreator.factoryCreator("pant");
-//        Clothing suits = (Clothing)  clothingCreator.factoryCreator("suits");
+        print("\t","chair:", chair.getType(),"\n","has Cushion", chair.hasCushion() ? "true" : "false");
+        print("\t","sofa:", sofa.getType(),"\n","has Leather", sofa.hasLeather() ? "true" : "false");
 
-        print("\n","Category:",tv.getCategory(),"\n","Name:",tv.getName(),"\n","Description:",tv.getDescription());
-        print("\n","Category:",smartphone.getCategory(),"\n","Name:",smartphone.getName(),"\n","Description:",smartphone.getDescription());
-
-        print("\n","Category:",mascara.getCategory(),"\n","Name:",mascara.getName(),"\n","Description:",mascara.getDescription());
-        print("\n","Category:",moisturizer.getCategory(),"\n","Name:",moisturizer.getName(),"\n","Description:",moisturizer.getDescription());
-
-        print("\n","Category:",pant.getCategory(),"\n","Name:",pant.getName(),"\n","Description:",pant.getDescription());
-//        print("\n","Category:",suits.getCategory(),"\n","Name:",suits.getName(),"\n","Description:",suits.getDescription());
     }
 }
