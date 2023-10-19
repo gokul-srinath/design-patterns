@@ -21,3 +21,9 @@ Factory method is now breakfown to categories, each category with switch handler
 Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying their concrete classes.
 
 ![Abstract Factory Pattern 1](./Abstract%20Factory%20Pattern%201.png)
+
+
+## SingleTon Pattern
+Singleton is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance.
+
+![SingleTon Pattern](./Singleton%20Pattern.png)

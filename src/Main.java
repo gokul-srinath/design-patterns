@@ -1,3 +1,5 @@
+import Singleton.AutomobileRobot;
+import Singleton.Machine;
 import abstract_factory_pattern.factories.ModernFactory;
 import abstract_factory_pattern.factories.ProductFactory;
 import abstract_factory_pattern.products.chair.ChairProduct;
@@ -15,8 +17,8 @@ public class Main {
         StringBuilder sb = new StringBuilder();
 
         for(String s : args) {
-            sb.append(s);
             sb.append('\t');
+            sb.append(s);
         }
 
         System.out.println(sb);
@@ -25,14 +27,13 @@ public class Main {
     }
 
     public static void main(String[] args) throws IllegalArgumentException{
-        ProductFactory modernFactory = new ModernFactory();
-
-        ChairProduct chair = modernFactory.createChair();
-        SofaProduct sofa = modernFactory.createSofa();
+        Machine automobileMachine = AutomobileRobot.getInstance();
 
 
-        print("\t","chair:", chair.getType(),"\n","has Cushion", chair.hasCushion() ? "true" : "false");
-        print("\t","sofa:", sofa.getType(),"\n","has Leather", sofa.hasLeather() ? "true" : "false");
+
+
+        print("call create:", automobileMachine.create(),"\n","has Instance:", AutomobileRobot.hasInstance() ? "true" : "false");
+
 
     }
 }
