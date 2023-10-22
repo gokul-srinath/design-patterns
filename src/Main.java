@@ -4,6 +4,9 @@ import abstract_factory_pattern.factories.ModernFactory;
 import abstract_factory_pattern.factories.ProductFactory;
 import abstract_factory_pattern.products.chair.ChairProduct;
 import abstract_factory_pattern.products.sofa.SofaProduct;
+import adapter_pattern.ClientPaymentAdapter;
+import adapter_pattern.ClientPaymentProcessor;
+import adapter_pattern.LegacyPaymentGateway;
 //import factory_pattern.creator.*;
 //import factory_pattern.products.Product;
 //import factory_pattern.products.clothes.Clothing;
@@ -27,12 +30,12 @@ public class Main {
     }
 
     public static void main(String[] args) throws IllegalArgumentException{
-        Machine automobileMachine = AutomobileRobot.getInstance();
 
+        LegacyPaymentGateway legacyPaymentGateway = new LegacyPaymentGateway();
 
+        ClientPaymentProcessor adapter = new ClientPaymentAdapter(legacyPaymentGateway);
 
-
-        print("call create:", automobileMachine.create(),"\n","has Instance:", AutomobileRobot.hasInstance() ? "true" : "false");
+        adapter.processRequest();
 
 
     }
